@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 class TimesTenConnector {
     private static final String DBDRIVER = "com.timesten.jdbc.TimesTenDriver";
-    private static final String DBURL = "jdbc:timesten:client:DSN=TT";
+    private static final String DBURL = "jdbc:timesten:client:DSN=ttbank";
     private static final String DBuser = "bankadm";
     private static final String DBPASSWORD = "bankadm";
     private Connection conn = null;

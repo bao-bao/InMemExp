@@ -22,6 +22,6 @@ public class Main {
         //ExprimentExecutor.getExprimentExecutor().doParallelComplexExp(1000);
 
         DBConnector.getDbConnector().close();
-        System.getProperties().get("java.library.path");
+        System.out.println(System.getProperties().get("java.library.path"));
     }
 }
