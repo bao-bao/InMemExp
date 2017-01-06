@@ -22,6 +22,7 @@ public class SimpleExp implements Runnable {
             CallableStatement pstmt = connectionPool.getConnection().prepareCall(sql);
             pstmt.setBigDecimal(1, BigDecimal.valueOf((int) (Math.random() * 2000)));
             pstmt.execute();
+            pstmt.getConnection().close();
             pstmt.close();
         } catch (SQLException e) {
             e.printStackTrace();

@@ -39,6 +39,7 @@ public class DepositExp implements Runnable {
             pstmt.setBigDecimal(4, BigDecimal.valueOf((int)(Math.random()*400)));
             pstmt.registerOutParameter(5, OracleTypes.INTEGER);
             pstmt.execute();
+            pstmt.getConnection().close();
             pstmt.close();
         } catch (SQLException e) {
             System.out.println("SQL Failed");

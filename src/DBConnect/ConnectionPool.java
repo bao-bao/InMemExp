@@ -75,7 +75,7 @@ public class ConnectionPool {
         System.out.println("Connection Pool Ready");
     }
 
-    public Connection getConnection() throws SQLException {
+    public synchronized Connection getConnection() throws SQLException {
         if (dataSource == null) {
             System.out.println("Database Connection Pool Failed");
         }
